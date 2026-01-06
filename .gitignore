@@ -1,1 +1,11 @@
 /target
+
+# Python / JSBSim
+myenv/
+venv/
+__pycache__/
+*.pyc
+
+
+# Large JSBSim data 
+jsbsim/
