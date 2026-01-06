@@ -1,0 +1,34 @@
+[package]
+name = "arinc429"
+version = "0.1.0"
+edition = "2021"
+authors = ["Olatunbosun Oyeleke <olatunbosunoyeleke@hotmail.com>"] 
+description = "A full-featured ARINC 429 encoder/decoder with BNR/BCD interpretation and SSM support"
+readme = "README.md"  
+repository = "https://github.com/olatunbosunoyeleke94/arinc429"
+license = "MIT OR Apache-2.0"  # Common open-source choice
+categories = ["aerospace::aeronautics", "embedded", "no-std"]
+keywords = ["arinc429", "avionics", "protocol"]
+
+
+[dependencies]
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+
+[[bin]]
+name = "arinc_encoder"
+path = "src/bin/arinc_encoder.rs"
+
+
+[[bin]]
+name = "test_direct"
+path = "src/bin/test_direct.rs"
+
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+
